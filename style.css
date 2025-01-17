@@ -142,6 +142,23 @@ nav{
     cursor: pointer;
 }
 
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3;
+}
+
+.active-link::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
 
 /* wrapper design */
 .wrapper{
@@ -427,6 +444,11 @@ h3{
 .project-box:hover.project-box>label{
     color: var(--body-white);
     z-index: 2;
+}
+
+.projects .bottom-header{
+    justify-content: center;
+    align-items: center;
 }
 
 /* Contact box */
